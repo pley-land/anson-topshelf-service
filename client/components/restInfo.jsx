@@ -18,10 +18,8 @@ class RestInfo extends React.Component {
 					<span>Price range</span>
 					<span>Tags</span>
 				</div>
-
-
 			</div>
-		)
+		);
 	}
 }
 
