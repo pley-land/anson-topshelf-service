@@ -1,11 +1,19 @@
 {
   "extends": "airbnb",
+  "plugins": [
+    "react"
+  ],
   "env": {
     "browser": true,
     "node": true,
-    "jasmine": true
+    "jasmine": true,
+    "react": true
   },
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "no-else-return": ["error", { "allowElseIf": true }]
+  },
+  "globals": {
+    "google": false
   }
 }
