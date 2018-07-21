@@ -1,28 +1,30 @@
 import React from 'react';
 
-class RestInfo extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return (
-			<div className="content-rest-info">
-				<h1>Restaurant Name</h1>
-				<div className="rest-info-numbers">
-					<div id="ratings">Ratings</div>
-					<div id="reviews">No. of reviews</div>
-					<div id="details">Details</div>
-				</div>
-				<div>
-					<span>Price range</span>
-					<span>Tags</span>
-				</div>
-
-
-			</div>
-		)
-	}
-}
+const RestInfo = (props) => (
+  <div className="content-rest-info">
+    <h1>
+      {props.name}
+    </h1>
+    <div className="rest-info-numbers">
+      <div id="ratings">
+        {props.average_rating}
+      </div>
+      <div id="reviews">
+        No. of reviews
+      </div>
+      <div id="details">
+        <a href="">Details</a>
+      </div>
+    </div>
+    <div id="rest2">
+      <span id="price_range">
+        {props.price}
+      </span>
+      <span>
+        {props.tags}
+      </span>
+    </div>
+  </div>
+);
 
 export default RestInfo;
