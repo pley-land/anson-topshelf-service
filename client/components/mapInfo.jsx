@@ -33,14 +33,14 @@ import $ from 'jquery';
 
 const MapInfo = (props) => (
 	<div className="map-info">
-		<p className="map-info-address">
+		<p className="map-info-address maptext">
 			{props.address}
 		</p>
-		<a>Get Directions</a>
-		<p className="map-info-phone">
+		<a className="maptext">Get Directions</a>
+		<p className="map-info-phone maptext">
 			{props.phone}
 		</p>
-		<a className="map-info-website">
+		<a className="map-info-website maptext" href="">
 			{props.website}
 		</a>
 	</div>

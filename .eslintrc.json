@@ -1,5 +1,8 @@
 {
   "extends": "airbnb",
+  "parserOptions": {
+      "sourceType": "module"
+  },
   "plugins": [
     "react"
   ],
@@ -7,7 +10,8 @@
     "browser": true,
     "node": true,
     "jasmine": true,
-    "react": true
+    "react": true,
+    "es6": true
   },
   "rules": {
     "no-console": "off",
