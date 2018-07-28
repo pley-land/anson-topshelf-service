@@ -22,3 +22,6 @@ coverage
 
 # Complied from webpack
 public/app.js
+
+# api key for google maps
+public/google.js
