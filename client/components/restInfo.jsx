@@ -1,30 +1,43 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 
-const RestInfo = (props) => (
-  <div className="content-rest-info">
-    <h1>
-      {props.name}
-    </h1>
-    <div className="rest-info-numbers">
-      <div id="ratings">
-        {props.average_rating}
+function RestInfo(props) {
+  console.log(props);
+  const {
+    name,
+    averageRating,
+    reviews,
+    price,
+    tags,
+  } = props;
+  return (
+    <div className="content-rest-info">
+      <h1>
+        {name}
+      </h1>
+      <div className="rest-info-numbers">
+        <div id="ratings">
+          {averageRating}
+        </div>
+        <div id="reviews">
+          {`${reviews} reviews`}
+        </div>
+        <div id="details">
+          <a href="">
+            Details
+          </a>
+        </div>
       </div>
-      <div id="reviews">
-        No. of reviews
-      </div>
-      <div id="details">
-        <a href="">Details</a>
+      <div id="rest2">
+        <span id="price_range">
+          {price}
+        </span>
+        <span>
+          {tags}
+        </span>
       </div>
     </div>
-    <div id="rest2">
-      <span id="price_range">
-        {props.price}
-      </span>
-      <span>
-        {props.tags}
-      </span>
-    </div>
-  </div>
-);
+  );
+}
 
 export default RestInfo;

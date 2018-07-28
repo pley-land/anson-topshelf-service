@@ -3,10 +3,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import $ from 'jquery';
-import MapView from './components/mapView.jsx';
+import Geocode from 'react-geocode';
+import MapView from './components/mapView';
 import MapInfo from './components/mapInfo';
 import RestInfo from './components/restInfo';
 import UserButtons from './components/userButtons';
+
+Geocode.setApiKey('AIzaSyD3DefVBOoJ5D_qvxhuMT0_0zgtgcadC8U');
 
 class App extends React.Component {
   constructor(props) {
@@ -18,8 +21,13 @@ class App extends React.Component {
       website: '',
       tags: '',
       price: 0,
-      average_rating: 0
+      averageRating: 0,
+      reviews: 0,
     };
+  }
+
+  componentDidMount() {
+    this.getInfo();
   }
 
   getInfo() {
@@ -30,32 +38,22 @@ class App extends React.Component {
       dataType: 'json',
     }).then((response) => {
       console.log(response);
-      const latlng = {
-        lat: response.lat,
-        lng: response.lng,
-      };
-      const geocoder = new google.maps.Geocoder();
-      geocoder.geocode({ location: latlng }, (results, status) => {
-        if (status === 'OK') {
-          console.log(results[0]);
-          // this.setState({
-          //   address: results[0].formatted_address,
-          //   phone: response.phone,
-          //   website: response.website
-          // })
+      Geocode.fromLatLng(response.lat, response.lng).then(
+        (geoResponse) => {
           this.setState({
-            average_rating: response.average_rating,
-            price: response.price,
-            tags: response.tags,
-            address: results[0].formatted_address,
+            address: geoResponse.results[0].formatted_address,
             phone: response.phone,
             website: response.website,
-          })
-        } else {
-          console.log('not ok');
-        }
-      });
-      // console.log(geocoder);
+            averageRating: response.averageRating,
+            price: response.price,
+            tags: response.tags,
+            reviews: response.reviews,
+          });
+        },
+        (err) => {
+          console.error(err);
+        },
+      );
     }, (err) => {
       console.log(err);
       return err;
@@ -63,28 +61,41 @@ class App extends React.Component {
   }
 
   render() {
-    const {address, phone, website, price, tags, average_rating, name} = this.state;
+    const {
+      address,
+      phone,
+      website,
+      price,
+      tags,
+      averageRating,
+      name,
+      reviews,
+    } = this.state;
     return (
       <div className="top-container">
         <div className="top-content-container">
           <div className="content-header-container">
-            <RestInfo name={name} average_rating={average_rating} price={price} tags={tags}/>
+            <RestInfo
+              name={name}
+              averageRating={averageRating}
+              price={price}
+              tags={tags}
+              reviews={reviews}
+            />
             <UserButtons />
           </div>
           <div className="content-body-container">
             <div className="content-map-info">
               <MapView />
-              <MapInfo address={address} phone={phone} website={website}/>
+              <MapInfo address={address} phone={phone} website={website} />
             </div>
           </div>
         </div>
       </div>
     );
   }
-
-  componentDidMount() {
-    this.getInfo();
-  }
 }
+
+export default App;
 
 ReactDom.render(<App />, document.getElementById('topShelf'));
