@@ -10,7 +10,6 @@
     "browser": true,
     "node": true,
     "jasmine": true,
-    "react": true,
     "es6": true
   },
   "rules": {

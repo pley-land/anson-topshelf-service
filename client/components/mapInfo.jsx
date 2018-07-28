@@ -1,49 +1,29 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
-import $ from 'jquery';
 
-// class MapInfo extends React.Component {
-// 	constructor(props) {
-// 		super(props);
-// 		this.state = {
-// 			address: 'Placeholder address',
-// 			phone: '123-456-7890',
-// 			website: 'www.placeholder.com'
-// 		}
-// 	}
-
-
-// 	render() {
-// 		const {address, phone, website} = this.props.info;
-// 		return (
-// 			<div className="map-info">
-// 				<p className="map-info-address">
-// 					{this.state.address}
-// 				</p>
-// 				<a>Get Directions</a>
-// 				<p className="map-info-phone">
-// 					{this.state.phone}
-// 				</p>
-// 				<a className="map-info-website">
-// 					{this.state.website}
-// 				</a>
-// 			</div>
-// 		)
-// 	}
-// }
-
-const MapInfo = (props) => (
-	<div className="map-info">
-		<p className="map-info-address maptext">
-			{props.address}
-		</p>
-		<a className="maptext">Get Directions</a>
-		<p className="map-info-phone maptext">
-			{props.phone}
-		</p>
-		<a className="map-info-website maptext" href="">
-			{props.website}
-		</a>
-	</div>
-)
+function MapInfo(props) {
+  console.log(props);
+  const {
+    address,
+    phone,
+    website,
+  } = props;
+  return (
+    <div className="map-info">
+      <p className="map-info-address maptext">
+        {address}
+      </p>
+      <p className="maptext">
+        Get Directions
+      </p>
+      <p className="map-info-phone maptext">
+        {phone}
+      </p>
+      <p className="map-info-website maptext" href="">
+        {website}
+      </p>
+    </div>
+  );
+}
 
 export default MapInfo;

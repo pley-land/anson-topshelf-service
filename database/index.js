@@ -17,8 +17,6 @@ const getRestInfo = (name, callback) => {
       callback(err);
     } else {
       const info = data[0];
-      info.lat = parseFloat(data[0].lat);
-      info.lng = parseFloat(data[0].lng);
       callback(err, info);
     }
     return err || data;
