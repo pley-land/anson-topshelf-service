@@ -25,7 +25,7 @@
     "morgan": "^1.9.0",
     "mysql": "^2.16.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "16.4.x",
     "react-geocode": "^0.1.2",
     "react-test-renderer": "^16.4.1",
     "request": "^2.87.0",
