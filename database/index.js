@@ -11,12 +11,22 @@ const connection = mysql.createConnection({
 // const infowindow = new google.maps.InfoWindow;
 
 const getRestInfo = (name, callback) => {
-  const query = `SELECT * FROM restaurants WHERE name = "${name}"`;
+  let query = '';
+  if (name === 'get all data') {
+    query = 'SELECT * FROM restaurants';
+  } else {
+    query = `SELECT * FROM restaurants WHERE name = "${name}"`;
+  }
   connection.query(query, (err, data) => {
     if (err) {
       callback(err);
     } else {
-      const info = data[0];
+      let info;
+      if (data.length === 1) {
+        info = data[0];
+      } else {
+        info = data;
+      }
       callback(err, info);
     }
     return err || data;
