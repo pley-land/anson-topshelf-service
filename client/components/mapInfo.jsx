@@ -2,7 +2,6 @@
 import React from 'react';
 
 function MapInfo(props) {
-  console.log(props);
   const {
     address,
     phone,

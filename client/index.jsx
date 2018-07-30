@@ -15,7 +15,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'in-n-out',
+      name: 'Mua',
       address: '',
       phone: '',
       website: '',
@@ -23,6 +23,8 @@ class App extends React.Component {
       price: 0,
       averageRating: 0,
       reviews: 0,
+      lat: 0,
+      lng: 0,
     };
   }
 
@@ -48,6 +50,8 @@ class App extends React.Component {
             price: response.price,
             tags: response.tags,
             reviews: response.reviews,
+            lat: parseFloat(response.lat),
+            lng: parseFloat(response.lng),
           });
         },
         (err) => {
@@ -70,6 +74,8 @@ class App extends React.Component {
       averageRating,
       name,
       reviews,
+      lat,
+      lng,
     } = this.state;
     return (
       <div className="top-container">
@@ -86,7 +92,7 @@ class App extends React.Component {
           </div>
           <div className="content-body-container">
             <div className="content-map-info">
-              <MapView />
+              <MapView lat={lat} lng={lng} />
               <MapInfo address={address} phone={phone} website={website} />
             </div>
           </div>

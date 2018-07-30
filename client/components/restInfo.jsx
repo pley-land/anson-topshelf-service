@@ -2,7 +2,6 @@
 import React from 'react';
 
 function RestInfo(props) {
-  console.log(props);
   const {
     name,
     averageRating,
@@ -12,7 +11,7 @@ function RestInfo(props) {
   } = props;
   return (
     <div className="content-rest-info">
-      <h1>
+      <h1 id="rest-name-title">
         {name}
       </h1>
       <div className="rest-info-numbers">
@@ -32,7 +31,7 @@ function RestInfo(props) {
         <span id="price_range">
           {price}
         </span>
-        <span>
+        <span id="rest-tags">
           {tags}
         </span>
       </div>

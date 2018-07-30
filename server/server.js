@@ -11,8 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/../public`));
 
 app.get('/biz/:restaurant/info', (req, res) => {
-  // req._parsedOriginalUrl.path.split('/')[2]
-  db.getRestInfo('in-n-out', (err, data) => {
+  db.getRestInfo(req.params.restaurant, (err, data) => {
     if (err) {
       res.status(400).json({ result: 'failed' });
     } else {
