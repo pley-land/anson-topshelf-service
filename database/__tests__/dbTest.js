@@ -4,7 +4,6 @@ const db = require('../index.js');
 describe('test database', () => {
   test('should return all data from database', (done) => {
     const callback = (err, data) => {
-      console.log(data.length);
       expect(data.length).toBe(100);
       done();
     };
