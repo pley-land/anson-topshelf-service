@@ -1,5 +1,5 @@
 .top-container {
-	background-color: #fff4fd;
+	background-color: #f2f2f2;
 	border-bottom: 1px lightgrey solid;
 	height: 400px;
 	position: fixed;
@@ -13,10 +13,20 @@
 	position: fixed;
 }
 
+i.mi-icons {
+	font-size: 14px;
+}
+
 .content-header-container {
 	display: flex;
 	flex-drection: row;
 	width: 100%;
+}
+
+#rest-name-title {
+	margin-bottom: 10px;
+	margin-top: 20px;
+	font-size: 40px;
 }
 
 .content-user-buttons {
@@ -26,15 +36,58 @@
 	flex-direction: row;
 }
 
+.starDiv-full {
+	background-color: red;
+	height: 25px;
+	width: 25px;
+	margin: 2px;
+	border-radius: 4px;
+	opacity: 0.7;
+}
+
+.starDiv-half {
+	background: linear-gradient(90deg, red 50%, lightgrey 50%);
+	height: 25px;
+	width: 25px;
+	margin: 2px;
+	border-radius: 4px;
+	opacity: 0.7;
+}
+
+.starDiv-empty {
+	background-color: lightgrey;
+	height: 25px;
+	width: 25px;
+	margin: 2px;
+	border-radius: 4px;
+	opacity: 0.7;
+}
+
+i.stars {
+	font-size: 21px;
+	text-align: center;
+}
+
+i.icon-white {
+	color: white;
+	margin: 2px;
+	border-radius: 5px;
+}
+
+i.dollar-sign {
+	margin: 0-4px;
+	font-size: 20px;
+}
+
 button {
 	width: 160px;
-	height: 50px;
+	height: 40px;
 	display: flex;
 	flex-direction: row;
 	font-size: 14px;
 	font-weight: bold;
 	background-color: red;
-	border-radius: 15px;
+	border-radius: 5px;
 }
 
 .spanDiv {
@@ -56,7 +109,7 @@ i {
 	width: 100px;
 	height: 40px;
 	margin-top: 5px;
-	background-color: #faffce;
+	background-color: #b3ffff;
 }
 
 .content-map-info {
@@ -64,7 +117,7 @@ i {
 	height: 300px;
 	background-color: white;
 	margin-top: 2%;
-	border: 1px black solid;
+	border: 1px lightgrey solid;
 }
 
 .rest-info-numbers {
@@ -94,10 +147,17 @@ i {
 
 #ratings {
 	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
 }
 
 #reviews {
 	flex-grow: 0.5;
+}
+
+.reviewButton {
+	color: white;
+	height: 38px;
 }
 
 #details {
@@ -110,9 +170,42 @@ i {
 	width: 150px;
 }
 
-#price_range {
+#price-range {
+	margin-right: 20px;
 	flex-grow: 2;
+	display: flex;
+	flex-direction: row;
 }
+
+#rest-tags {
+	font-size: 18px;
+	color: #b3ccff;
+	display: flex;
+	flex-direction: row;
+}
+
+.leftSpan {
+	border-radius: 5px 0 0 5px;
+}
+
+.midSpan {
+	border-radius: 0;
+}
+
+.rightSpan {
+	border-radius: 0 5px 5px 0;
+}
+
+.galleryImg {
+	display: inline-block;
+	float: left;
+	margin-top: -300px;
+	margin-left: 300px;
+	height: 300px;
+	width: auto;
+}
+
+
 
 
 

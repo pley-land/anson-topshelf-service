@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import RestInfo from '../components/restInfo';
 
 describe('Testing RestInfo', () => {
-  const wrapper = shallow(<RestInfo />);
+  const wrapper = shallow(<RestInfo name="in-n-out" averageRating={4} reviews={995} price={2} tags="Chinese, Japanese" />);
   it('should render a rating component', () => {
     expect(wrapper.find('#ratings').length).toEqual(1);
   });
@@ -17,7 +17,7 @@ describe('Testing RestInfo', () => {
     expect(wrapper.find('#details').length).toEqual(1);
   });
   it('should render a price range', () => {
-    expect(wrapper.find('#price_range').length).toEqual(1);
+    expect(wrapper.find('#price-range').length).toEqual(1);
   });
   it('should render a tags component', () => {
     expect(wrapper.find('#rest-tags').length).toEqual(1);

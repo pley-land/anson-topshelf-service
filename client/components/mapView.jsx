@@ -5,6 +5,7 @@ import {
   Marker,
   GoogleApiWrapper,
 } from 'google-maps-react';
+import GOOGLE_API_KEY from '../../public/google';
 
 class MapView extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class MapView extends React.Component {
     this.state = {
       theLat: lat,
       theLng: lng,
+
     };
   }
 
@@ -36,6 +38,7 @@ class MapView extends React.Component {
       height: '140px',
       width: '280px',
       margin: '5px 10px',
+      border: '1px lightgrey solid',
     };
     let stuff;
     const { google } = this.props;
@@ -43,7 +46,7 @@ class MapView extends React.Component {
       stuff = <span />;
     } else {
       stuff = (
-        <div>
+        <div className="showMap">
           <Map
             google={google}
             style={style}

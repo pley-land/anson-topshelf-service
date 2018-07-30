@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import $ from 'jquery';
 import Geocode from 'react-geocode';
+import GOOGLE_API_KEY from '../public/google';
 import MapView from './components/mapView';
 import MapInfo from './components/mapInfo';
 import RestInfo from './components/restInfo';
@@ -15,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Mua',
+      name: 'Tacolicious',
       address: '',
       phone: '',
       website: '',
@@ -96,6 +97,7 @@ class App extends React.Component {
               <MapInfo address={address} phone={phone} website={website} />
             </div>
           </div>
+          <img src="https://s3-us-west-1.amazonaws.com/fec-static-anson/Screen+Shot+2018-07-30+at+12.04.08+PM.png" className="galleryImg" alt="gallery" />
         </div>
       </div>
     );

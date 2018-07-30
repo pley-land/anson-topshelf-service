@@ -12,7 +12,7 @@ function UserButtons() {
         </span>
       </button>
       <div className="spanDiv">
-        <button className="buttonSpans" type="button">
+        <button className="buttonSpans leftSpan" type="button">
           <i className="material-icons">
             photo_camera
           </i>
@@ -20,7 +20,7 @@ function UserButtons() {
             Add Photo
           </span>
         </button>
-        <button className="buttonSpans" type="button">
+        <button className="buttonSpans midSpan" type="button">
           <i className="material-icons">
             share
           </i>
@@ -28,7 +28,7 @@ function UserButtons() {
             Share
           </span>
         </button>
-        <button className="buttonSpans" type="button">
+        <button className="buttonSpans rightSpan" type="button">
           <i className="material-icons">
             save
           </i>
