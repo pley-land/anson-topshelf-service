@@ -1,8 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
 import renderer from 'react-test-renderer';
-import App from '../components/userButtons';
+// import App from '../components/userButtons';
 
 describe('Testing UserButtons', () => {
   it('should render properly', () => {
