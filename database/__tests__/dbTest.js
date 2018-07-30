@@ -1,4 +1,4 @@
-// const jest = require('jest');
+const jest = require('jest');
 const db = require('../index.js');
 
 describe('test database', () => {
