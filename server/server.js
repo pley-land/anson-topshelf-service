@@ -11,11 +11,11 @@ const port = process.env.PORT || 3001;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/../public`));
+app.use('/google', express.static(`${__dirname}/../client/config/google.js`));
 
 app.get('/biz/:restaurant/info', (req, res) => {
   // req.params.restaurant
   db.getRestInfo(req.params.restaurant).then((response) => {
-    console.log(response);
     res.status(200).json(response);
   }, (err) => {
     res.status(400).json({ result: err });

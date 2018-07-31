@@ -6,7 +6,7 @@ import {
   GoogleApiWrapper,
 } from 'google-maps-react';
 // import GOOGLE_API_KEY from '../config/google';
-
+console.log(window);
 class MapView extends React.Component {
   constructor(props) {
     super(props);
