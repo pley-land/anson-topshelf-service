@@ -36,6 +36,12 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
+      - run:
+          name: Print test environment variable
+          command: |
+            cat ${BASH_ENV}
+            echo ${TEST_ENV}
+            
       - run: npm test
 
 
