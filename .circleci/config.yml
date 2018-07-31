@@ -35,7 +35,10 @@ jobs:
         
       # run tests!
       - run:
-          GOOGLE_API_KEY: $GOOGLE_API_KEY
+          name: check-environment
+          command: |
+            echo 'export GOOGLE_API_KEY=$(GOOGLE_API_KEY)' >> $BASH_ENV
+            source $BASH_ENV
       - run: npm test
 
 
