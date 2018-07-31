@@ -35,9 +35,7 @@ jobs:
         
       # run tests!
       - run:
-          name: check-environment
-          command: |
-            echo $GOOGLE_API_KEY
+          GOOGLE_API_KEY: $GOOGLE_API_KEY
       - run: npm test
 
 
