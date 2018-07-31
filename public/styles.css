@@ -1,3 +1,4 @@
+/* App */
 .top-container {
 	background-color: #f2f2f2;
 	border-bottom: 1px lightgrey solid;
@@ -13,29 +14,48 @@
 	position: fixed;
 }
 
-i.mi-icons {
-	font-size: 14px;
-}
-
 .content-header-container {
 	display: flex;
 	flex-drection: row;
 	width: 100%;
 }
 
-#rest-name-title {
-	margin-bottom: 10px;
-	margin-top: 20px;
-	font-size: 40px;
+.content-map-info {
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	margin-top: 2%;
+	border: 1px lightgrey solid;
 }
 
-.content-user-buttons {
-	margin-top: 5%;
-	margin-left: 30%;
+.galleryImg {
+	display: inline-block;
+	float: left;
+	margin-top: -300px;
+	margin-left: 300px;
+	height: 300px;
+	width: auto;
+}
+
+/* MapInfo*/
+.map-info {
+	margin: 150px 10px 0 10px;
+	height: 150px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
+.maptext {
+	margin: 4px 0;
+}
+
+i.mi-icons {
+	font-size: 14px;
+}
+
+/* MapView */
+
+/* RestInfo*/
 .starDiv-full {
 	background-color: red;
 	height: 25px;
@@ -63,21 +83,77 @@ i.mi-icons {
 	opacity: 0.7;
 }
 
-i.stars {
-	font-size: 21px;
-	text-align: center;
-}
-
 i.icon-white {
 	color: white;
 	margin: 2px;
 	border-radius: 5px;
 }
 
+i.stars {
+	font-size: 21px;
+	text-align: center;
+}
+
 i.dollar-sign {
 	margin: 0-4px;
 	font-size: 20px;
 }
+
+.rest-info-numbers {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+	margin-top: -10px;
+}
+
+#rest-name-title {
+	margin-bottom: 10px;
+	margin-top: 20px;
+	font-size: 40px;
+}
+
+#ratings {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+#reviews {
+	flex-grow: 0.5;
+}
+
+#details {
+	flex-grow: 0.5;
+}
+
+#rest2 {
+	display: flex;
+	flex-direction: row;
+	width: 150px;
+}
+
+#price-range {
+	margin-right: 20px;
+	flex-grow: 2;
+	display: flex;
+	flex-direction: row;
+}
+
+#rest-tags {
+	font-size: 18px;
+	color: #b3ccff;
+	display: flex;
+	flex-direction: row;
+}
+/* UserButtons */
+
+.content-user-buttons {
+	margin-top: 5%;
+	margin-left: 30%;
+	display: flex;
+	flex-direction: row;
+}
+
 
 button {
 	width: 160px;
@@ -112,21 +188,6 @@ i {
 	background-color: #b3ffff;
 }
 
-.content-map-info {
-	width: 300px;
-	height: 300px;
-	background-color: white;
-	margin-top: 2%;
-	border: 1px lightgrey solid;
-}
-
-.rest-info-numbers {
-	display: flex;
-	flex-direction: row;
-	width: 300px;
-	margin-top: -10px;
-}
-
 .map-view {
 	width: 280px;
 	height: 150px;
@@ -134,54 +195,9 @@ i {
 	margin: 8px 8px 0 8px;
 }
 
-.map-info {
-	margin: 150px 10px 0 10px;
-	height: 150px;
-	display: flex;
-	flex-direction: column;
-}
-
-.maptext {
-	margin: 4px 0;
-}
-
-#ratings {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: row;
-}
-
-#reviews {
-	flex-grow: 0.5;
-}
-
 .reviewButton {
 	color: white;
 	height: 38px;
-}
-
-#details {
-	flex-grow: 0.5;
-}
-
-#rest2 {
-	display: flex;
-	flex-direction: row;
-	width: 150px;
-}
-
-#price-range {
-	margin-right: 20px;
-	flex-grow: 2;
-	display: flex;
-	flex-direction: row;
-}
-
-#rest-tags {
-	font-size: 18px;
-	color: #b3ccff;
-	display: flex;
-	flex-direction: row;
 }
 
 .leftSpan {
@@ -194,15 +210,6 @@ i {
 
 .rightSpan {
 	border-radius: 0 5px 5px 0;
-}
-
-.galleryImg {
-	display: inline-block;
-	float: left;
-	margin-top: -300px;
-	margin-left: 300px;
-	height: 300px;
-	width: auto;
 }
 
 
