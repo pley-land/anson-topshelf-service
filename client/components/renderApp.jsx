@@ -9,7 +9,8 @@ import MapInfo from './mapInfo';
 import RestInfo from './restInfo';
 import UserButtons from './userButtons';
 
-Geocode.setApiKey(GOOGLE_API_KEY);
+let key = GOOGLE_API_KEY || process.env.GOOGLE_API_KEY;
+Geocode.setApiKey(key);
 
 export default class App extends React.Component {
   constructor(props) {

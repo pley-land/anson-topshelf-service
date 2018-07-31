@@ -34,6 +34,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
+      - run:
+          name: check-environment
+          command: |
+            echo $GOOGLE_API_KEY
       - run: npm test
 
 
