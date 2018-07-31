@@ -27,12 +27,12 @@ function MapInfo(props) {
         </i>
         {phone}
       </p>
-      <p className="map-info-website maptext" href="">
+      <a className="map-info-website maptext" href="www.in-n-out.com">
         <i className="material-icons mi-icons">
           link
         </i>
         {website}
-      </p>
+      </a>
     </div>
   );
 }

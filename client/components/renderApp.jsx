@@ -97,7 +97,7 @@ export default class App extends React.Component {
               <MapInfo address={address} phone={phone} website={website} />
             </div>
           </div>
-          <img src="https://s3-us-west-1.amazonaws.com/fec-static-anson/Screen+Shot+2018-07-30+at+12.04.08+PM.png" className="galleryImg" alt="gallery" />
+          <div id="gallery" />
         </div>
       </div>
     );

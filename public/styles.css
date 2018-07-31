@@ -1,3 +1,7 @@
+body {
+	font-family: Arial;
+}
+
 /* App */
 .top-container {
 	background-color: #f2f2f2;
@@ -110,6 +114,7 @@ i.dollar-sign {
 	margin-bottom: 10px;
 	margin-top: 20px;
 	font-size: 40px;
+	white-space: nowrap;
 }
 
 #ratings {
@@ -148,10 +153,12 @@ i.dollar-sign {
 /* UserButtons */
 
 .content-user-buttons {
+	position: absolute;
 	margin-top: 5%;
 	margin-left: 30%;
 	display: flex;
 	flex-direction: row;
+	margin-left: 520px;
 }
 
 
@@ -172,9 +179,19 @@ button {
 	flex-direction: row;
 }
 
-.buttonText {
+.buttonText-m {
 	margin-top: 5%;
 }
+
+.buttonText-sm {
+	margin-top: 10%;
+}
+
+i.icon-sm {
+	margin-top: 3%;
+}
+
+
 
 i {
 	margin: 5px;
@@ -183,7 +200,7 @@ i {
 .buttonSpans {
 	font-size: 10px;
 	width: 100px;
-	height: 40px;
+	height: 30px;
 	margin-top: 5px;
 	background-color: #b3ffff;
 }
@@ -202,6 +219,7 @@ i {
 
 .leftSpan {
 	border-radius: 5px 0 0 5px;
+	white-space: nowrap;
 }
 
 .midSpan {

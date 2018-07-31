@@ -50,8 +50,12 @@
   },
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["client/**/*.{js,jsx}"],
-    "coveragePathIgnorePatterns": ["./client/components/mapView"],
+    "collectCoverageFrom": [
+      "client/**/*.{js,jsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./client/components/mapView"
+    ],
     "setupTestFrameworkScriptFile": "./testing.js",
     "verbose": true,
     "testURL": "http://localhost/",
