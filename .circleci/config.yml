@@ -10,7 +10,6 @@ jobs:
       - image: circleci/node:7.10
 
     environment:
-      GOOGLE_API_KEY: $(GOOGLE_API_KEY)
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
