@@ -8,6 +8,9 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
+
+    environment:
+      GOOGLE_API_KEY: $GOOGLE_API_KEY
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -34,10 +37,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run:
-          name: check-environment
-          command: |
-            echo 'export GOOGLE_API_KEY=$(GOOGLE_API_KEY)'
       - run: npm test
 
 
