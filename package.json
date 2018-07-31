@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon server/server.js",
     "build": "webpack -d --watch",
-    "test": "jest --detectOpenHandles",
+    "test": "jest",
     "lint": "eslint ./"
   },
   "dependencies": {
