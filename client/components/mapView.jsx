@@ -65,7 +65,7 @@ class MapView extends React.Component {
   }
 }
 
-const key = process.env.GOOGLE_API_KEY;
+const key = process.env.GOOGLE_API_KEY || GOOGLE_API_KEY;
 export default GoogleApiWrapper({
   apiKey: key,
 })(MapView);

@@ -47,7 +47,6 @@ function RestInfo(props) {
       </i>,
     );
   }
-  console.log(tags);
   const tagsArr = tags.split(', ');
   const tagsDiv = [];
 
