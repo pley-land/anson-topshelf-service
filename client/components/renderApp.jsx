@@ -3,7 +3,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Geocode from 'react-geocode';
-import GOOGLE_API_KEY from '../../public/google';
+// import GOOGLE_API_KEY from '../config/google';
 import MapView from './mapView';
 import MapInfo from './mapInfo';
 import RestInfo from './restInfo';
@@ -14,8 +14,9 @@ Geocode.setApiKey(GOOGLE_API_KEY);
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    const { name } = this.props;
     this.state = {
-      name: 'Tacolicious',
+      name: name,
       address: '',
       phone: '',
       website: '',
@@ -39,7 +40,6 @@ export default class App extends React.Component {
       method: 'GET',
       dataType: 'json',
     }).then((response) => {
-      console.log(response);
       Geocode.fromLatLng(response.lat, response.lng).then(
         (geoResponse) => {
           this.setState({

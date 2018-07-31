@@ -24,4 +24,4 @@ coverage
 public/app.js
 
 # api key for google maps
-public/google.js
+client/config/google.js

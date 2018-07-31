@@ -15,9 +15,7 @@ exports[`test App should render App properly 1`] = `
       >
         <h1
           id="rest-name-title"
-        >
-          Tacolicious
-        </h1>
+        />
         <div
           className="rest-info-numbers"
         >

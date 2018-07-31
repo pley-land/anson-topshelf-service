@@ -5,7 +5,7 @@ import {
   Marker,
   GoogleApiWrapper,
 } from 'google-maps-react';
-import GOOGLE_API_KEY from '../../public/google';
+// import GOOGLE_API_KEY from '../config/google';
 
 class MapView extends React.Component {
   constructor(props) {

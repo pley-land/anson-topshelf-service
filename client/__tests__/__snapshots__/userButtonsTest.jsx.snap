@@ -23,7 +23,7 @@ exports[`Testing UserButtons should render properly 1`] = `
     className="spanDiv"
   >
     <button
-      className="buttonSpans"
+      className="buttonSpans leftSpan"
       type="button"
     >
       <i
@@ -38,7 +38,7 @@ exports[`Testing UserButtons should render properly 1`] = `
       </span>
     </button>
     <button
-      className="buttonSpans"
+      className="buttonSpans midSpan"
       type="button"
     >
       <i
@@ -53,7 +53,7 @@ exports[`Testing UserButtons should render properly 1`] = `
       </span>
     </button>
     <button
-      className="buttonSpans"
+      className="buttonSpans rightSpan"
       type="button"
     >
       <i

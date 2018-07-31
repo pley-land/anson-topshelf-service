@@ -49,6 +49,9 @@
     "webpack-cli": "^3.1.0"
   },
   "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": ["client/**/*.{js,jsx}"],
+    "coveragePathIgnorePatterns": ["./client/components/mapView"],
     "setupTestFrameworkScriptFile": "./testing.js",
     "verbose": true,
     "testURL": "http://localhost/",

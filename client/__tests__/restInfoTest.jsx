@@ -23,7 +23,6 @@ describe('Testing RestInfo', () => {
   it('should render a tags component', () => {
     expect(wrapper.find('#rest-tags').length).toEqual(1);
   });
-
   const output = renderer.create(<RestInfo tags="Chinese, Japanese" />).toJSON();
   it('should render the whole component', () => {
     expect(output).toMatchSnapshot();

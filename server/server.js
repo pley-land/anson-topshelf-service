@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 // const request = require('request');
 const db = require('../database/index.js');
+var React = require('react');
+var reactDom = require('react-dom/server');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -20,7 +22,6 @@ app.get('/biz/:restaurant/info', (req, res) => {
   });
   // res.status(200).json({result: 'all good'});
 });
-
 
 app.listen(port, () => {
   console.log(`Listening to port ${port}`);
