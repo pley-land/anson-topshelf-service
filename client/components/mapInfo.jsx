@@ -27,7 +27,7 @@ function MapInfo(props) {
         </i>
         {phone}
       </p>
-      <a className="map-info-website maptext" href="www.in-n-out.com">
+      <a className="map-info-website maptext" href={`http://${website}`}>
         <i className="material-icons mi-icons">
           link
         </i>
