@@ -52,6 +52,7 @@ class MapView extends React.Component {
             style={style}
             zoom={14}
             initialCenter={{ lat: theLat, lng: theLng }}
+            className="gMap"
           >
             <Marker
               onClick={this.onMarkerClick}

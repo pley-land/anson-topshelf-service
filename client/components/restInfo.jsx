@@ -68,8 +68,8 @@ function RestInfo(props) {
       );
     } else {
       tagsDiv.push(
-        <a href={url} key={`link${i}`}>
-          {`${tagsArr[i]}, `}
+        <a href={url} key={`link${i}`} className="cusineTags">
+          {`${tagsArr[i]},`}
         </a>,
       );
     }
@@ -86,11 +86,6 @@ function RestInfo(props) {
         </div>
         <div id="reviews">
           {`${reviews} reviews`}
-        </div>
-        <div id="details">
-          <a href="">
-            Details
-          </a>
         </div>
       </div>
       <div id="rest2">

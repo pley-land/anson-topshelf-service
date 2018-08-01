@@ -45,6 +45,7 @@ export default class App extends React.Component {
       Geocode.fromLatLng(response.lat, response.lng).then(
         (geoResponse) => {
           this.setState({
+            name: response.name,
             address: geoResponse.results[0].formatted_address,
             phone: response.phone,
             website: response.website,
@@ -98,7 +99,7 @@ export default class App extends React.Component {
               <MapInfo address={address} phone={phone} website={website} />
             </div>
           </div>
-          <div id="gallery" />
+          <div id="gallery"/>
         </div>
       </div>
     );
