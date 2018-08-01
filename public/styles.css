@@ -7,7 +7,7 @@ body {
 	background-color: #f2f2f2;
 	border-bottom: 1px lightgrey solid;
 	height: 400px;
-	position: fixed;
+	/*position: fixed;*/
 	width: 100%;
 }
 
@@ -15,7 +15,7 @@ body {
 	width: 65%;
 	height: 425px;
 	margin: 0 17%;
-	position: fixed;
+	/*position: fixed;*/
 }
 
 .content-header-container {
@@ -162,7 +162,7 @@ i.dollar-sign {
 }
 
 
-button {
+/*button {
 	width: 160px;
 	height: 40px;
 	display: flex;
@@ -171,7 +171,7 @@ button {
 	font-weight: bold;
 	background-color: #8B0000;
 	border-radius: 5px;
-}
+}*/
 
 .spanDiv {
 	margin-left: 10px;
@@ -215,19 +215,33 @@ i {
 .reviewButton {
 	color: white;
 	height: 38px;
+	width: 160px;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #8B0000;
+	border-radius: 5px;
 }
 
 .leftSpan {
 	border-radius: 5px 0 0 5px;
 	white-space: nowrap;
+	display: flex;
+	flex-direction: row;
 }
 
 .midSpan {
 	border-radius: 0;
+	display: flex;
+	flex-direction: row;
 }
 
 .rightSpan {
 	border-radius: 0 5px 5px 0;
+	display: flex;
+	flex-direction: row;
 }
 
 

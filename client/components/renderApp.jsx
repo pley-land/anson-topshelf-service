@@ -16,8 +16,9 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     const { name } = this.props;
+    const theName = name.replace(/%20/g, " ");
     this.state = {
-      name: name,
+      name: theName,
       address: '',
       phone: '',
       website: '',
